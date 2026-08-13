@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Custom cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Ambient gradient orbs -->
+<div class="orb orb-1" aria-hidden="true"></div>
+<div class="orb orb-2" aria-hidden="true"></div>
+<div class="orb orb-3" aria-hidden="true"></div>
+
+<!-- ===== EDITOR TAB BAR (NAV) ===== -->
+<header class="tabbar">
+  <div class="tabbar-inner">
+    <div class="tabbar-brand">
+      <span class="brand-dot"></span>
+      <span class="brand-name">dev<span class="accent-cyan">.</span>portfolio</span>
+    </div>
+    <nav class="tabs" id="tabs">
+      <a href="#home" class="tab active" data-file="home.html"><span class="tab-icon icon-html"></span>home.html</a>
+      <a href="#about" class="tab" data-file="about.js"><span class="tab-icon icon-js"></span>about.js</a>
+      <a href="#skills" class="tab" data-file="skills.json"><span class="tab-icon icon-json"></span>skills.json</a>
+      <a href="#projects" class="tab" data-file="projects"><span class="tab-icon icon-folder"></span>projects/</a>
+      <a href="#contact" class="tab" data-file="contact.md"><span class="tab-icon icon-md"></span>contact.md</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO / TERMINAL ===== -->
+  <section id="home" class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="terminal-window">
+        <div class="terminal-titlebar">
+          <div class="tl-dots"><span></span><span></span><span></span></div>
+          <span class="tl-title">zsh — profile.sh</span>
+        </div>
+        <div class="terminal-body">
+          <p class="term-line"><span class="prompt">visitor@web:~$</span> <span class="cmd">whoami</span></p>
+          <pre class="term-output" id="typedOutput"></pre>
+          <p class="term-line"><span class="prompt">visitor@web:~$</span> <span class="cursor-blink" id="blinkCursor">▍</span></p>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <p class="eyebrow">// BSIT — 7th Semester</p>
+        <h1 class="hero-title">Building things<br>for the <span class="grad-text">web</span>,<br>one commit at a time.</h1>
+        <p class="hero-sub">I'm a Web Developer who enjoys turning ideas into working software — from clean front-end interfaces to logic underneath, whether that's JavaScript, C++, or C#.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects <span class="arrow">→</span></a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <p class="file-label"><span class="tab-icon icon-js"></span> about.js</p>
+      <div class="code-block reveal">
+        <p class="code-line"><span class="kw">const</span> <span class="var">developer</span> <span class="op">=</span> <span class="punc">{</span></p>
+        <p class="code-line indent"><span class="prop">name</span><span class="punc">:</span> <span class="str">"Abdullah Zafar"</span><span class="punc">,</span></p>
+        <p class="code-line indent"><span class="prop">role</span><span class="punc">:</span> <span class="str">"Web Developer"</span><span class="punc">,</span></p>
+        <p class="code-line indent"><span class="prop">status</span><span class="punc">:</span> <span class="str">"BSIT Student — 7th Semester"</span><span class="punc">,</span></p>
+        <p class="code-line indent"><span class="prop">bio</span><span class="punc">:</span> <span class="str">"Hi, I am Abdullah Zafar. I am a professional web developer"</span><span class="punc">,</span></p>
+        <p class="code-line indent"><span class="prop">focus</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"Front-end"</span><span class="punc">,</span> <span class="str">"Problem Solving"</span><span class="punc">,</span> <span class="str">"Clean Code"</span><span class="punc">]</span></p>
+        <p class="code-line"><span class="punc">}</span><span class="punc">;</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section section-alt">
+    <div class="section-inner">
+      <p class="file-label"><span class="tab-icon icon-json"></span> skills.json</p>
+      <h2 class="section-title reveal">What I work with</h2>
+
+      <div class="skills-groups">
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">Web</h3>
+          <div class="skill-row"><span class="skill-name">HTML</span><div class="skill-bar"><div class="skill-fill" style="--level:92%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">CSS</span><div class="skill-bar"><div class="skill-fill" style="--level:88%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-fill" style="--level:80%"></div></div></div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">Programming</h3>
+          <div class="skill-row"><span class="skill-name">C++</span><div class="skill-bar"><div class="skill-fill" style="--level:65%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">C#</span><div class="skill-bar"><div class="skill-fill" style="--level:65%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-fill" style="--level:40%"></div></div></div>
+          <div class="skill-row"><span class="skill-name">Assembly</span><div class="skill-bar"><div class="skill-fill" style="--level:30%"></div></div></div>
+        </div>
+      </div>
+
+      <div class="tags-row reveal">
+        <span class="tag">Git</span>
+        <span class="tag">Responsive Design</span>
+        <span class="tag">Problem Solving</span>
+        <span class="tag">OOP</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <p class="file-label"><span class="tab-icon icon-folder"></span> projects/</p>
+      <h2 class="section-title reveal">Things I've built</h2>
+      <p class="section-sub reveal">A few projects — replace the details below with your own, and link each to its live demo and GitHub repo.</p>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-index">01</span>
+            <div class="project-links">
+              <a href="https://github.com/Abdullah-WD/Portal" class="icon-link" aria-label="GitHub repository" title="GitHub">
+                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.35-3.88-1.35-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.26 5.69.41.36.78 1.08.78 2.17v3.22c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+              </a>
+              <a href="https://abdullah-wd.github.io/Portal/" class="icon-link" aria-label="Live demo" title="Live demo">
+                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Project Name One</h3>
+          <p class="project-desc">Short description of what this project does and the problem it solves. Keep it to one or two sentences.</p>
+          <div class="project-tags">
+            <span class="tag tag-sm">HTML</span>
+            <span class="tag tag-sm">CSS</span>
+            <span class="tag tag-sm">JavaScript</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-index">02</span>
+            <div class="project-links">
+              <a href="https://github.com/Abdullah-WD/Elite-Digital-Hub" class="icon-link" aria-label="GitHub repository" title="GitHub">
+                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.35-3.88-1.35-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.26 5.69.41.36.78 1.08.78 2.17v3.22c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+              </a>
+              <a href="https://abdullah-wd.github.io/Elite-Digital-Hub/" class="icon-link" aria-label="Live demo" title="Live demo">
+                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Project Name Two</h3>
+          <p class="project-desc">Short description of what this project does and the problem it solves. Keep it to one or two sentences.</p>
+          <div class="project-tags">
+            <span class="tag tag-sm">HTML</span>
+            <span class="tag tag-sm">CSS</span>
+            <span class="tag tag-sm">JavaScript</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-index">03</span>
+            <div class="project-links">
+              <a href="https://github.com/Abdullah-WD/campus-navigator" class="icon-link" aria-label="GitHub repository" title="GitHub">
+                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.35-3.88-1.35-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.26 5.69.41.36.78 1.08.78 2.17v3.22c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Campus Navigator</h3>
+          <p class="project-desc">A graph-based route planner that finds the shortest path between locations using Dijkstra's algorithm, with BFS/DFS-powered reachability and connectivity checks.</p>
+          <div class="project-tags">
+            <span class="tag tag-sm">C++</span>
+            <span class="tag tag-sm">DSA</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-card-top">
+            <span class="project-index">04</span>
+            <div class="project-links">
+              <a href="https://github.com/Abdullah-WD/smart-file-organizer" class="icon-link" aria-label="GitHub repository" title="GitHub">
+                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.35-3.88-1.35-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.26 5.69.41.36.78 1.08.78 2.17v3.22c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Smart File Organizer</h3>
+          <p class="project-desc">An automation tool that sorts files into category folders, logs every action, and auto-generates a PDF summary report — with optional email delivery.</p>
+          <div class="project-tags">
+            <span class="tag tag-sm">Python</span>
+            <span class="tag tag-sm">Automation</span>
+          </div>
+        </article>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="section-inner contact-inner">
+      <p class="file-label"><span class="tab-icon icon-md"></span> contact.md</p>
+      <h2 class="section-title reveal"># Let's connect</h2>
+      <p class="section-sub reveal">Have a project in mind, or just want to say hi? Reach out — I usually reply within a day or two.</p>
+
+      <div class="contact-grid reveal">
+        <a class="contact-card" href="mailto:your.email@example.com">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M2 4h20v16H2V4Zm2 2v.01L12 12l8-5.99V6H4Zm16 2.24-7.4 5.55a1 1 0 0 1-1.2 0L4 8.24V18h16V8.24Z"/></svg>
+          </span>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">abdullahzafar55025@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://github.com/Abdullah-WD" target="_blank" rel="noopener">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.35-3.88-1.35-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18.92-.26 1.9-.38 2.88-.39.98 0 1.96.13 2.88.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.26 5.69.41.36.78 1.08.78 2.17v3.22c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+          </span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">https://github.com/Abdullah-WD</span>
+        </a>
+      </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p><span class="prompt">&copy;</span> Abdullah Zafar : Web Developer — <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
