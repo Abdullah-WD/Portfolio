@@ -62,10 +62,17 @@
     p.style.transition="transform .3s";
   }
 
+  /* WhatsApp contact: put your number here, country code first, digits only (e.g. 923001234567) */
+  var WA_NUMBER="923035036050";
+  var waReady=/^\d{10,15}$/.test(WA_NUMBER);
+  var waLink=document.getElementById("wa-link"),waNote=document.getElementById("wa-note");
+  if(waLink&&waReady)waLink.href="https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent("Hi Abdullah, I found your portfolio and would like to talk.");
   document.getElementById("form").addEventListener("submit",function(ev){
-    ev.preventDefault();var d=new FormData(ev.target);
-    var body="From: "+d.get("n")+" ("+d.get("e")+")\n\n"+d.get("m");
-    location.href="mailto:abdullahzafar55025@gmail.com?subject="+encodeURIComponent("Portfolio message from "+d.get("n"))+"&body="+encodeURIComponent(body);
+    ev.preventDefault();
+    if(!waReady){waNote.textContent="WhatsApp number is not set yet. Add it in script.js (WA_NUMBER).";return;}
+    var d=new FormData(ev.target);
+    var text="Hi Abdullah, I’m "+d.get("n")+".\n\n"+d.get("m");
+    window.open("https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(text),"_blank","noopener");
   });
 
   /* project previews: use real screenshots from images/ when they exist */

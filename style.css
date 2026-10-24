@@ -202,3 +202,4 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.8rem
 .m-foot{background:#1E2A47;color:#cdd6ee;font:.6rem/1.7 "DM Sans",sans-serif;padding:14px;margin-top:10px}
 img.sc{width:100%;height:auto;display:block}
 .s4{--a:#D94F86;--c1:#FAD3E2;--c2:#CDE6F7}.s5{--a:#6B52C8;--c1:#CDE6F7;--c2:#E3DDF7}.s6{--a:#1F9D77;--c1:#CFF1E4;--c2:#EAF8F2}
+.btn.wa{background:#25D366;color:#073B20;box-shadow:0 8px 20px rgba(37,211,102,.3)}.btn.wa:hover{background:#1EBE5A;color:#052b17}
